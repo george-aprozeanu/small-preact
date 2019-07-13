@@ -3,26 +3,8 @@
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"build": "rollup -c"
-	},
-	"babel": {
-		"plugins": [
-			[
-				"@babel/plugin-transform-react-jsx",
-				{
-					"pragma": "h"
-				}
-			]
-		],
-		"presets": [
-			"@babel/env",
-			[
-				"@babel/typescript",
-				{
-					"jsxPragma": "h"
-				}
-			]
-		]
+		"build": "rollup -c",
+		"watch": "rollup -c -w"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.4",
@@ -35,11 +17,7 @@
 		"preact": "^8.4.2",
 		"rollup": "^1.11.3",
 		"rollup-plugin-babel": "^4.3.2",
-		"rollup-plugin-commonjs": "^9.3.4",
-		"rollup-plugin-fill-html": "^1.1.0",
 		"rollup-plugin-node-resolve": "^4.2.4",
-		"rollup-plugin-replace": "^2.2.0",
-		"rollup-plugin-uglify": "^6.0.2",
-		"typescript": "^3.4.5"
+		"rollup-plugin-replace": "^2.2.0"
 	}
 }

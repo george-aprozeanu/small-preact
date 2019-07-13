@@ -1,9 +1,12 @@
-import {render, h} from 'preact';
+import { render, h, Component } from 'preact';
 
-function HelloWorld({name}: { name: string }) {
-	return <h1>Hello {name}</h1>
+class HelloWorld extends Component<{ name?: string }>{
+	props = {
+		name: 'World'
+	}
+	render({name}) {
+		return <div>Hello, {name}</div>
+	}
 }
 
-
-render(<HelloWorld name="Cici"/>, document.body);
-
+render(<HelloWorld name='Cici' />, document.querySelector('#main'));
