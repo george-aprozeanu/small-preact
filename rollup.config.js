@@ -11,12 +11,11 @@ export default {
 		babel({
 			extensions,
 			plugins: [
-				["@babel/plugin-transform-react-jsx", { "pragma": "h" }],
 				["@babel/proposal-class-properties"],
 				["@babel/proposal-object-rest-spread"]
 			],
 			presets: [
-				["@babel/env"],
+				["@babel/react", { "pragma": "h" }],
 				["@babel/typescript", { "jsxPragma": "h" }]
 			]
 		})

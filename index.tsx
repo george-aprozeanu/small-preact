@@ -4,9 +4,15 @@ class HelloWorld extends Component<{ name?: string }>{
 	props = {
 		name: 'World'
 	}
-	render({name}) {
+	render({ name }) {
 		return <div>Hello, {name}</div>
 	}
 }
 
-render(<HelloWorld name='Cici' />, document.querySelector('#main'));
+function Main() {
+	const props = { name: 'Preact' }
+	return <HelloWorld {...props} />
+}
+
+document.addEventListener('DOMContentLoaded', () =>
+	render(<Main />, document.querySelector('#main')))
