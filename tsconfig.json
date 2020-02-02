@@ -1,7 +1,0 @@
-{
-	"compilerOptions": {
-		"module": "commonjs",
-		"jsx": "preserve",
-		"moduleResolution": "node"
-	}
-}

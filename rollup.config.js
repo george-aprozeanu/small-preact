@@ -1,27 +1,21 @@
-import resolve from 'rollup-plugin-node-resolve';
-import babel from 'rollup-plugin-babel';
+import resolve from '@rollup/plugin-node-resolve'
+import babel from 'rollup-plugin-babel'
 
-const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+const extensions = ['.js', '.jsx']
 
 export default {
-	plugins: [
-		resolve({ extensions }),
-		babel({
-			extensions,
-			plugins: [
-				["@babel/proposal-class-properties"],
-				["@babel/proposal-object-rest-spread"]
-			],
-			presets: [
-				["@babel/react", { "pragma": "h" }],
-				["@babel/typescript", { "jsxPragma": "h" }]
-			]
-		})
-	],
-	input: 'index.tsx',
-	output: {
-		file: 'index.js',
-		format: 'cjs',
-		globals: {},
-	}
-};
+    plugins: [
+        resolve({ extensions }),
+        babel({
+            extensions,
+            'plugins': [
+                '@babel/plugin-transform-react-jsx'
+            ]
+        })
+    ],
+    input: 'index.jsx',
+    output: {
+        file: 'index.js',
+        format: 'cjs'
+    }
+}

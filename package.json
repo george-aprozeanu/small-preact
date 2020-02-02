@@ -1,20 +1,17 @@
 {
-	"name": "small-preact",
-	"version": "1.0.0",
-	"private": true,
-	"scripts": {
-		"build": "rollup -c",
-		"watch": "rollup -c -w"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.4.4",
-		"@babel/plugin-proposal-class-properties": "^7.4.4",
-		"@babel/plugin-proposal-object-rest-spread": "^7.4.4",
-		"@babel/preset-react": "^7.0.0",
-		"@babel/preset-typescript": "^7.3.3",
-		"preact": "^8.4.2",
-		"rollup": "^1.11.3",
-		"rollup-plugin-babel": "^4.3.2",
-		"rollup-plugin-node-resolve": "^4.2.4"
-	}
+  "name": "small-preact",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@rollup/plugin-node-resolve": "^7.1.0",
+    "preact": "^10.2.1",
+    "rollup": "^1.31.0",
+    "rollup-plugin-babel": "^4.3.3"
+  }
 }
